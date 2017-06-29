@@ -1,0 +1,126 @@
+@CHARSET "UTF-8";
+
+.cart-thead {
+	display: inline-block;
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	margin: 0 0 10px;
+	padding: 5px 0;
+	background: #f3f3f3;
+	border: 1px solid #e9e9e9;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: rgb(233, 233, 233);
+	border-top: 0;
+	position: relative;
+
+}
+.shoplogo{
+	float: left;position: relative;width: 270px;padding: 0;height: 60px;margin-left: 200px;	
+}
+.x {
+    width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.t-goods {
+	width: 585px;text-align: center;
+}
+
+.t-props {
+	width: 140px;text-align: center;
+}
+
+.t-price {
+	width: 120px;
+	text-align: center;
+}
+
+.t-quantity {
+	width: 80px;
+	text-align: center;
+}
+
+.t-sum {
+	width: 100px;
+	text-align: center;
+}
+
+.t-action {
+	width: 75px;
+	text-align: center;
+}
+
+.column {
+	float: left;
+}
+.item-form {
+    display: inline-block;
+    display: block;
+    position: relative;
+}
+.p-goods {
+    width: 585px;
+}
+.p-price {
+    width: 120px;
+    padding-right: 40px;
+    font-family: verdana;
+    text-align: center;
+}
+.p-quantity {
+    width: 80px;
+    text-align: center;
+}
+.p-sum {
+    width: 100px;
+    padding-right: 40px;
+    text-align: center;
+    font-family: verdana;
+}
+.p-ops {
+    width: 75px;
+    text-align: center;
+}
+.cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+.goods-item {
+    display: inline-block;
+    display: block;
+}
+.p-img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+.p-name {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.item-line{
+	margin-top: 2px;
+}
+.submit-btn {
+    display: block;
+    position: relative;
+    width: 96px;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    background: #e54346;
+    overflow: hidden;
+}

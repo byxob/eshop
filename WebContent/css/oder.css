@@ -1,0 +1,64 @@
+@CHARSET "UTF-8";
+
+.w {
+    width: 990px;
+    margin: 0 auto;
+}
+.checkout-tit {
+    height: 42px;
+    line-height: 42px;
+    font-size: 16px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+}
+.tit-txt {
+    float: left;
+}
+.checkout-steps {
+    background-color: #fff;
+    padding: 0 20px;
+    border: 1px solid #f0f0f0;
+}
+.step-tit {
+    line-height: 40px;
+    height: 40px;
+    color: #333;
+}
+.step-cont {
+    margin-bottom: 10px;
+}
+.payment-list {
+    padding: 0 20px 10px;
+}
+.payment-list .list-cont ul {
+    display: inline-block;
+    display: block;
+}
+.payment-list .list-cont .payment-item {
+    float: left;
+    position: relative;
+    border: 1px solid #ddd;
+    height: 18px;
+    line-height: 18px;
+    padding: 5px 24px;
+    cursor: pointer;
+}
+.checkout-submit {
+    float: right;
+    position: relative;
+    width: 135px;
+    height: 36px;
+    line-height: 36px;
+    margin: 8px 10px 0 0;
+    padding: 0;
+    background-color: #e00;
+    overflow: hidden;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: arial,"Microsoft YaHei";
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 0;
+}

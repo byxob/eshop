@@ -11,6 +11,7 @@ HyperText Markup Language -->
 <head>
 <meta charset="UTF-8">
 <title>物联网专业-新开普实训</title>
+<link rel="stylesheet" href="css/shoplist.css" type="text/css" />
 <link rel="stylesheet" href="css/top.css" type="text/css" />
 <style type="text/css">
 * {
@@ -23,7 +24,7 @@ HyperText Markup Language -->
 table, tr, td {
 	margin: 5px;
 	padding: 5px;
-	border: 1px #EBEBEB solid;
+	border: 0px #EBEBEB solid;
 }
 
 table {
@@ -101,35 +102,64 @@ table {
 			</ul>
 		</div>
 	</div>
+	<div class="cart-thead x">
+		<div class="column t-goods">商品</div>
+		<div class="column t-props"></div>
+		<div class="column t-price">单价</div>
+		<div class="column t-quantity">数量</div>
+		<div class="column t-sum">小计</div>
+		<div class="column t-action">操作</div>
+	</div>
+	<%
+		double a = 0.0;
+		double sum = 0.0;
+		List<CartItem> shopcart = (List<CartItem>) session.getAttribute("shc");
+		for (CartItem i : shopcart) {
+	%>
+	<div class="item-form x">
+		<div class="cell p-goods">
+			<div class="goods-item">
+				<div class="p-img">
+					<a href="detail.jsp?gcode=<%=i.getGoods().getGcode()%>" class="J_zyyhq_11922453">
+					<img alt="" src="<%=i.getGoods().getGpic()%>"></a>
+				</div>
+				<div class="item-msg">
+					<div class="p-name">
+						<a href="detail.jsp?gcode=<%=i.getGoods().getGcode()%>"><%=i.getGoods().getGname()%></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cell p-price">
+			<strong>¥<%=i.getGoods().getGprice()%></strong>
+		</div>
+
+		<div class="cell p-quantity"><%=i.getNum()%></div>
+
+		<div class="cell p-sum">
+			<strong>¥<%=i.getNum() * i.getGoods().getGprice()%></strong>
+		</div>
+		<div class="cell p-ops">
+			<a href="delitem.jsp?gcode=<%=i.getGoods().getGcode()%>">删除</a>
+			<%
+				a = i.getNum() * i.getGoods().getGprice();
+					sum = sum + a;
+			%>
+		</div>
+	</div>
+	<div class="item-line"><hr/></div>
+	<%
+		}
+	%>
 	<table>
 		<tr>
-			<td>商品信息</td>
-			<td>单价</td>
-			<td>数量</td>
-			<td>小计</td>
-			<td>操作</td>
-		</tr>
-		<%
-			List<CartItem> shopcart = (List<CartItem>) session.getAttribute("shc");
-			for (CartItem i : shopcart) {
-		%>
-		<tr>
-			<td><%=i.getGoods().getGname()%></td>
-			<td><%=i.getGoods().getGprice()%></td>
-			<td><%=i.getNum()%></td>
-			<td><%=i.getNum() * i.getGoods().getGprice()%></td>
-			<td><a href="delitem.jsp?gcode=<%=i.getGoods().getGcode()%>">删除</a>
-			</td>
-		</tr>
-		
-		<%
-			}
-		%>
-		<tr>
-			<td colspan="5" align="right">总价：</td>
+			<td colspan="5" align="right">总价：<%=sum%></td>
 		</tr>
 		<tr>
-			<td colspan="5" align="right"><a href="oder.jsp">结算</a></td>
+			<td colspan="5" align="right">
+			<div class="btn-area"><a href="oder.jsp" class="submit-btn">
+			去结算<b></b></a>
+			</div></td>
 		</tr>
 	</table>
 </body>
